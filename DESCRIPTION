@@ -1,0 +1,14 @@
+Package: DataLinter
+Title: R Studio Addin for DataLinter
+Version: 0.1.0
+Authors@R: person("Corneliu", "Cofaru", email = "cornel@oxoaresearch.com", role = c("aut", "cre"))
+Description: This package contains an addin for running DataLinter from Rstudio
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+Imports:
+    shiny,
+    miniUI,
+    rstudioapi,
+    httr,
+    rjson,
+    tuple
