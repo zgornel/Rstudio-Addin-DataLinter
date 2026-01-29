@@ -1,0 +1,4 @@
+Name: Lint data and code
+Description: Checks data and code for errors
+Binding: lint
+Interactive: true
