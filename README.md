@@ -19,5 +19,5 @@ Once the package is installed, addins will be avaiable under the 'Addins' menu i
 
 An other way to launch via executing command in the console is as follows:
 ```r
-RStudioAddins::datalinter()
+RStudioAddins::lint()
 ```
