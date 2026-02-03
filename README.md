@@ -20,7 +20,7 @@ Once the package is installed, add-ins will be available under the 'Addins' menu
 
 An other way to launch via executing command in the console is as follows:
 ```r
-RStudioAddins::lint()
+DataLinter::lint()
 ```
 
 ## Usage
