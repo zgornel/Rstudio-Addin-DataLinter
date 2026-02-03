@@ -9,5 +9,5 @@ LINTER_CODE <- "m2 <- lm(col4 ~ col1 + col2 + col3, data = out1)"
 # or, run DataLinter::lint()
 
 # Eval and run the code
-eval(LINTER_CODE)
-print(m2)
+# eval(LINTER_CODE)
+# print(m2)
