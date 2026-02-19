@@ -1,6 +1,8 @@
 # Rstudio plugin for DataLinter
 This is a R package that allows one to run [DataLinter](https://github.com/zgornel/DataLinter) from R studio.
 
+[![License](http://img.shields.io/badge/license-GPL-brightgreen.svg?style=flat)](LICENSE)
+
 ## Installation
 
 Make sure you have up-to-date stable versions of [devtools](https://github.com/hadley/devtools) and [rstudioapi](https://github.com/rstudio/rstudioapi/) installed before installing the package. Installing [shiny](https://github.com/rstudio/shiny) and [miniUI](https://github.com/rstudio/miniUI) is optional but recommended as the plugin is under development and may support UIs in the future.
