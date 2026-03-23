@@ -22,6 +22,7 @@ lint <- function() {
                                                         data=datastring,
                                                         data_delim=",",
                                                         data_header=TRUE,
+                                                        data_type="dataset",
                                                         code=codestring),
                                             options = list(
                                                         show_stats=TRUE,
