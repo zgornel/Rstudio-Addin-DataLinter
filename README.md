@@ -16,6 +16,10 @@ docker pull ghcr.io/zgornel/datalinter-compiled:latest
 ### Rstudio plugin
 Install the package:
 ```r
+pak::pak("zgornel/Rstudio-Addin-DataLinter")
+```
+or, using `devtools`:
+```r
 devtools::install_github("zgornel/Rstudio-Addin-DataLinter")
 ```
 Once the package is installed, add-ins will be available under the 'Addins' menu in RStudio.
