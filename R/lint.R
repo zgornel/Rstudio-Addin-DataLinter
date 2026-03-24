@@ -16,7 +16,7 @@ lint <- function() {
 
     codestring <- get("LINTER_CODE", envir=.GlobalEnv)
     df <- get("LINTER_DATA", envir=.GlobalEnv)
-    datastring <- paste(capture.output(write.csv(out1,"", row.names = FALSE)), collapse="\n")
+    datastring <- paste(capture.output(write.csv(df,"", row.names = FALSE)), collapse="\n")
     linter_input <- list(linter_input=list(
                                            context = list(
                                                         data=datastring,
@@ -38,6 +38,5 @@ lint <- function() {
     message(output$linting_output)
 
 }
-
 
 lint()

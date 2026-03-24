@@ -1,5 +1,5 @@
 library(glmmTMB)
-data_path <- "~/projects/DataLinter/test/data/imbalanced_data.csv"
+data_path <- "~/projects/DataLinter/test/data/data.csv"
 out1 <- read.csv(data_path, header=TRUE)
 
 # LINTER_DATA and LINTER_CODE are used by the DataLinter plugin
@@ -15,3 +15,4 @@ DataLinter::lint()
 # Eval and run the code
 eval(LINTER_CODE)
 print(m2)
+
