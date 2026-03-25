@@ -3,6 +3,7 @@ library(miniUI)
 library(httr)
 library(rjson)
 library(tuple)
+library(rstudioapi)
 
 lint <- function() {
   data_varname <- "LINTER_DATA"
