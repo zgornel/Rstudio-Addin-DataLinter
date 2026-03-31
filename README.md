@@ -1,11 +1,14 @@
-# Rstudio plugin for DataLinter
-This is a R package that allows one to run [DataLinter](https://github.com/zgornel/DataLinter) from R studio.
+# RStudio plugin for DataLinter
+This is a R package that allows one to run [DataLinter](https://github.com/zgornel/DataLinter) from RStudio.
 
 [![License](http://img.shields.io/badge/license-GPL-brightgreen.svg?style=flat)](LICENSE)
 
+![til](./gifs/rstudio_linting.gif)
+
+
 ## Installation
 
-Make sure you have up-to-date stable versions of [devtools](https://github.com/hadley/devtools) and [rstudioapi](https://github.com/rstudio/rstudioapi/) installed before installing the package. Installing [shiny](https://github.com/rstudio/shiny) and [miniUI](https://github.com/rstudio/miniUI) is optional but recommended as the plugin is under development and may support UIs in the future.
+Make sure you have up-to-date stable versions of [devtools](https://github.com/hadley/devtools) or [pak](https://pak.r-lib.org/) and [rstudioapi](https://github.com/rstudio/rstudioapi/) installed before installing the package.
 
 ### DataLinter
 Install [DataLinter](https://github.com/zgornel/DataLinter) by pulling the Docker image:
@@ -13,7 +16,7 @@ Install [DataLinter](https://github.com/zgornel/DataLinter) by pulling the Docke
 docker pull ghcr.io/zgornel/datalinter-compiled:latest
 ```
 
-### Rstudio plugin
+### RStudio plugin
 Install the package:
 ```r
 pak::pak("zgornel/Rstudio-Addin-DataLinter")
@@ -24,13 +27,8 @@ devtools::install_github("zgornel/Rstudio-Addin-DataLinter")
 ```
 Once the package is installed, add-ins will be available under the 'Addins' menu in RStudio.
 
-An other way to launch via executing command in the console is as follows:
-```r
-DataLinter::lint()
-```
-
 ## Usage
-The Rstudio plugin requires a server (which performs the actual linting) to function correctly. The linting server with can be started with:
+The RStudio plugin requires a server (which performs the actual linting) to function correctly. The linting server with can be started with:
 ```
 docker run -it --rm -p10000:10000 \
     ghcr.io/zgornel/datalinter-compiled:latest \
@@ -46,4 +44,22 @@ Warning: KB file not correctly specified, defaults will be used.
 [ Info: • Data linting server online @0.0.0.0:10000...
 [ Info: Listening on: 0.0.0.0:10000, thread id: 1
 ```
-Afterwards, one can use the plugin from Rstudio: the only requirement for it to work is that the varibles `LINTER_DATA` (a dataframe) and `LINTER_CODE` (some valid R code string) be visible An example of interactive use of the linter can be found in [R/example.R](https://github.com/zgornel/Rstudio-Addin-DataLinter/blob/master/R/example.R)
+
+Afterwards, one can use the plugin from RStudio:
+ - selected code will be sent to the linter
+ - if the code contains a `data = my_variable` field, `my_variable` will be sent as well to the linter
+ - if `data=...` field is not present, a variable named `LINTER_DATA` has to be defined and its contents will be sent to the linter;
+
+## License
+
+This code has an GPLv3 license.
+
+
+## Reporting Bugs
+
+Please [file an issue](https://github.com/zgornel/Rstudio-Addin-DataLinter/issues/new) to report a bug or request a feature.
+
+
+## References
+
+[1] https://en.wikipedia.org/wiki/Lint_(software)
