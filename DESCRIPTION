@@ -12,4 +12,3 @@ Imports:
     httr,
     rjson,
     tuple,
-    rstudioapi

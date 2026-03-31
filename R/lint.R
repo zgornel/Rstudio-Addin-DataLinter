@@ -1,10 +1,3 @@
-library(shiny)
-library(miniUI)
-library(httr)
-library(rjson)
-library(tuple)
-library(rstudioapi)
-
 lint <- function() {
   data_varname <- "LINTER_DATA"
 
@@ -90,11 +83,11 @@ lint <- function() {
     }
   }
 
-  # Prepare data as CSV string (exactly as original)
+  # Prepare data as CSV string
   datastring <- paste(capture.output(write.csv(df, "", row.names = FALSE)),
                       collapse = "\n")
 
-  # Build the same payload as the original function
+  # Build payload
   linter_input <- list(linter_input = list(
     context = list(
       data = datastring,
@@ -118,6 +111,3 @@ lint <- function() {
   output <- rjson::fromJSON(content)
   message(output$linting_output)
 }
-
-lint()
-# (The original file ended with lint(); you can keep that call if desired)
