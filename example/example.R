@@ -1,12 +1,9 @@
 library(glmmTMB)
 data_path <- "~/projects/DataLinter/test/data/imbalanced_data.csv"
 out1 <- read.csv(data_path, header=TRUE)
-
-# LINTER_DATA and LINTER_CODE are used by the DataLinter plugin
-LINTER_DATA <- out1
 m2 <- glmmTMB(col4 ~ col1 + col2 + col3,
               data = out1,
-              family=binomial(link="linear"))
+              family=binomial(link="logit"))
 
 # HERE we can call the plugin!
 # or, run

@@ -6,8 +6,6 @@ Description: This package contains an addin for running DataLinter from Rstudio
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
 Imports:
-    shiny,
-    miniUI,
     rstudioapi,
     httr,
     rjson,

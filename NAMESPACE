@@ -1,8 +1,5 @@
 export(lint)
-import(shiny)
 import(tuple)
-import(miniUI)
 import(httr)
 import(rjson)
 import(rstudioapi)
-

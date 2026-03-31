@@ -5,7 +5,7 @@ This is a R package that allows one to run [DataLinter](https://github.com/zgorn
 
 ## Installation
 
-Make sure you have up-to-date stable versions of [devtools](https://github.com/hadley/devtools) and [rstudioapi](https://github.com/rstudio/rstudioapi/) installed before installing the package. Installing [shiny](https://github.com/rstudio/shiny) and [miniUI](https://github.com/rstudio/miniUI) is optional but recommended as the plugin is under development and may support UIs in the future.
+Make sure you have up-to-date stable versions of [devtools](https://github.com/hadley/devtools) and [rstudioapi](https://github.com/rstudio/rstudioapi/) installed before installing the package.
 
 ### DataLinter
 Install [DataLinter](https://github.com/zgornel/DataLinter) by pulling the Docker image:
