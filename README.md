@@ -31,7 +31,7 @@ See the full [DataLinter documentation](https://zgornel.github.io/DataLinter/dev
 
 
 ## Prerequisites
-- **R** ≥ 4.0 (tested with imports: `rstudioapi`, `httr`, `rjson`, `tuple`)
+- **R** ≥ 4.0 (tested with imports: `rstudioapi`, `httr`, `rjson`)
 - **RStudio** (Desktop or Server) with the Addins menu enabled
 - **Docker** (recommended and documented deployment for DataLinter)
 - Up-to-date `pak` or `devtools` + `rstudioapi`

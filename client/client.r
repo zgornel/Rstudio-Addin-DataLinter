@@ -3,12 +3,10 @@
 
 #install.packages('httr')
 #install.packages('rjson')
-#install.packages('tuple')
 args<-commandArgs(TRUE)
 
 library('httr')
 library('rjson')
-library('tuple')
 
 DATAPATH <- args[1]
 CODEPATH <- args[2]
